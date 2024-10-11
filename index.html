@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASTARTWEB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Прелоадер (Блок preloader) -->
+    <div class="preloader">
+        <!-- Логотип и кнопка -->
+        <div class="preloader__header">
+            <h1 class="preloader__title">NASTARTWEB</h1>
+            <button class="preloader__button">Связаться</button>
+        </div>
+
+        <!-- Первое видео на заднем плане -->
+        <video class="preloader__video preloader__video--bg" id="bgVideo" src="videos/bg.mp4" autoplay muted loop></video>
+
+        <!-- Второе видео с рамкой поверх первого -->
+        <div class="preloader__monitor">
+            <div class="preloader__monitor-frame">
+                <video class="preloader__video preloader__video--overlay" id="caseVideo" src="videos/case.mp4" autoplay muted loop></video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контент (Блок content) -->
+    <div class="content">
+        <!-- Заголовок (Блок header) -->
+        <div class="header">
+            <h1 class="header__title">NASTARTWEB</h1>
+        </div>
+
+        <!-- Подзаголовок (Блок subtext) -->
+        <div class="subtext">
+            <p class="subtext__line">МИР ДВИЖЕТСЯ БЫСТРО, МЫ ИДЕМ В НОГУ.</p>
+            <p class="subtext__line">ПРОРЕЖЬТЕ ШУМ С НАШИМ ПРОЦЕССОМ.</p>
+        </div>
+
+        <!-- Текст внизу (Блок bottom-text) -->
+        <div class="bottom-text">
+            <div class="bottom-text__item">КОМПЛЕКСНЫЕ ВОЗМОЖНОСТИ ПРОЕКТИРОВАНИЯ</div>
+            <div class="bottom-text__item">МОЩНЫЙ ДУЭТ, ДВИЖИМЫЙ ДИЗАЙНОМ</div>
+        </div>
+    </div>
+
+<div class="main"> 
+        <p class="text"> 
+            The world moves fast, we keep pace. Cut through the noise with our process.
+        </p>
+    </div>
+</body>
+</html>
+
