@@ -7,22 +7,24 @@
 
 /* Высота на весь экран */
 html, body {
-    height: 100%;
+    max-width: 1920px;
+    
+    
     font-family: Arial, sans-serif;
-    overflow: hidden; /* Убираем скролл */
+    
 }
 
 /* Прелоадер */
 .preloader {
     position: relative;
     width: 100%;
-    height: 100%;
-    background-color: black;
+    height: 500px;
+    background-color: rgb(68, 66, 66);
     z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    
 }
 
 /* Логотип и кнопка */
@@ -74,8 +76,8 @@ html, body {
 /* Монитор с рамкой для второго видео */
 .preloader__monitor {
     position: absolute;
-    width: 698px;
-    height: 761px;
+    width: 450px;
+    height: 450px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -92,17 +94,23 @@ html, body {
 }
 
 .preloader__video--overlay {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Сохранение пропорций видео */
-    border-radius: 5px;
+    position: absolute;
+    z-index: 5;
+    bottom: -25%;
+    height: 250px;
+   
 }
 
 /* Основной контент */
 .content {
-    display: none; /* Контент по умолчанию скрыт */
-    z-index: 3;
-    position: relative;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
 }
 
 /* Заголовок */
@@ -141,46 +149,26 @@ html, body {
     text-align: center;
 }
 
-.main { 
-    background-color: aqua;
- backdrop-filter: blur(1200px);
-    
+
+
+img { 
+    width: 450px;
+    height: 450px;
+    position: relative;
+    bottom: -50%;
+    z-index: 1;
 }
+
+.main-block { 
+    background-color: darkgrey;
+    height: 700px;
+    top: 944px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
 
 /* Адаптивные стили для мобильных устройств */
-@media (max-width: 768px) {
-    .preloader__monitor {
-        width: 100%;
-        height: auto;
-    }
-
-    .preloader__title {
-        font-size: 2rem;
-        margin-left: 20px;
-    }
-
-    .preloader__button {
-        font-size: 0.9rem;
-        margin-right: 20px;
-    }
-
-    .header__title {
-        font-size: 2rem;
-        margin-top: 60px;
-    }
-
-    .subtext__line {
-        font-size: 1rem;
-        padding: 0 20px;
-    }
-
-    .bottom-text {
-        flex-direction: column;
-        align-items: center;
-        bottom: 20px;
-    }
-
-    .bottom-text__item {
-        margin: 10px 0;
-    }
-}
