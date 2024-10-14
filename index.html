@@ -7,81 +7,92 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Прелоадер (Блок preloader) -->
-    <div class="preloader">
-        <!-- Логотип и кнопка -->
-        <div class="preloader__header">
-            <h1 class="preloader__title">NASTARTWEB</h1>
-            <button class="preloader__button">Связаться</button>
-        </div>
-
-        <!-- Первое видео на заднем плане -->
-        <video class="preloader__video preloader__video--bg" id="bgVideo" src="videos/bg.mp4" autoplay muted loop></video>
-
-        <!-- Второе видео с рамкой поверх первого -->
-        <div class="preloader__monitor">
-            <div class="preloader__monitor-frame">
-                <img src="/img/Pro Display XDR Front View Mockup.png" alt="Monitor">
-                <video width="450" height="200" class="preloader__video preloader__video--overlay" id="caseVideo" src="videos/case.mp4" autoplay muted loop></video>
-            </div>
-        </div>
-        
+    <!-- Блок с видео -->
+    <div class="video-block">
+        <video class="preloader__video" id="bgVideo" src="videos/bg.mp4" autoplay muted loop></video>
     </div>
 
-    <!-- Основной контент (Блок content) -->
-    <div class="content">
-        <!-- Заголовок (Блок header) -->
-        <div class="header">
-            <h1 class="header__title">NASTARTWEB</h1>
-        </div>
-
-        <!-- Подзаголовок (Блок subtext) -->
-        <div class="subtext">
-            <p class="subtext__line">powerful test Digital Agency</p>
-            <p class="subtext__line"></p>
-        </div>
-
-        <!-- Текст внизу (Блок bottom-text) -->
-        <div class="bottom-text">
-            <div class="bottom-text__item"></div>
-            <div class="bottom-text__item"></div>
-        </div>
-
-        
-    </div>
-
-
-
-        <div class="bottom-text">
-            <div class="left-text">
-                КОМПЛЕКСНЫЕ <br> ВОЗМОЖНОСТИ <br> ПРОЕКТИРОВАНИЯ
-            </div>
-            <div class="right-text">
-                МОЩНЫЙ <br> ДУЭТ, ДВИЖИМЫЙ <br> ДИЗАЙНОМ
-            </div>
-        </div>
-    </div>
-
-   
-    </div>
-
-
-    
-
-
-</div>
-<div class="main-block">
-    
-        <h1 class="main-heading">
-            THE WORLD MOVES FAST, WE KEEP PACE. <br>
-            CUT THROUGH THE NOISE WITH OUR PROCESS.
+    <!-- Заголовок -->
+    <header class="header">
+        <h1 class="header__title">
+            <img width="282" height="47" src="/img/LOGO NASTARTWEB.svg">
         </h1>
-    
+        <button class="header__button">Связаться</button>
+    </header>
 
-    
-    </body>
-    
+    <!-- Блок с текстом -->
+    <div class="text-block">
+        <div class="text-item" id="text1">NASTARTWEB
+           <div class="powerful">powerful test <br>Digital Agency</div>
+        </div>
+       
+            <!-- <p>powerful test Digital Agency</p> -->
+        
+        
+    </div>
 
-   
+    <!-- Блок с монитором и видео -->
+    <div class="preloader__monitor">
+        <img class="monitor-image" src="/img/Pro Display XDR Front View Mockup.png" alt="Monitor">
+        <video class="preloader__video--overlay" id="caseVideo" src="videos/case.mp4" autoplay muted loop></video>
+    </div>
+
+    <!-- Блок с текстом -->
+    <div class="main-text-block">
+        <p class="main__text">The world moves<br> fast, we keep pace.<br> Cut through the<br> noise with our<br> process.</p>
+    </div>
+    <div class="side_text"> 
+        <div class="text_one">Комплексные возможности ∞ проектирования</div>
+        <div class="text_two">Мощный дуэт, движимый дизайном</div>
+    </div>
+
+    <!-- Второй блок с текстом -->
+    <div class="footer-text-block">
+        <p>Текст для второго блока</p>
+    </div>
+
+
+    <div class="footer-text-block"></div>
+        <p>Текст для второго блока</p>
+    </div>
+
+    <!-- Новый блок внизу -->
+    <div class="bottom-block">
+        <div class="headline">Заголовок</div>
+        <div class="content-block">
+            <div class="content-item" data-name="nastart.dev" data-date="08.11.2023" data-award="Madeontilda">nastart.dev</div>
+            <div class="content-item" data-name="nastart.dev" data-date="08.11.2023" data-award="Madeontilda">nastart.dev</div>
+            <div class="content-item" data-name="nastart.dev" data-date="08.11.2023" data-award="Madeontilda">nastart.dev</div>
+            <div class="content-item" data-name="nastart.dev" data-date="08.11.2023" data-award="Madeontilda">nastart.dev</div>
+            <div class="content-item" data-name="nastart.dev" data-date="08.11.2023" data-award="Madeontilda">nastart.dev</div>
+            <div class="content-item" data-name="nastart.dev" data-date="08.11.2023" data-award="Madeontilda">nastart.dev</div>
+    </div>
+    <script>       
+    const monitor = document.getElementById('monitor');
+    const bottomBlock = document.getElementById('bottomBlock');
+
+    // Используем IntersectionObserver для отслеживания пересечения
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                monitor.style.opacity = '0'; // Скрываем монитор
+            } else {
+                monitor.style.opacity = '1'; // Показываем монитор, когда блок не пересекается
+            }
+        });
+    }, {
+        root: null, // Отслеживаем относительно viewport
+        threshold: 0 // Реагируем, когда блок частично входит в область видимости
+    });
+
+    // Наблюдаем за нижним блоком
+    observer.observe(bottomBlock);
+</script> 
+</body>
 </html>
+
+
+
+
+
 

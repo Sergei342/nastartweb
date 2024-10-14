@@ -1,171 +1,233 @@
-/* Сброс отступов */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Высота на весь экран */
 html, body {
     max-width: 1920px;
-    
-    
+    margin: 0 auto;
     font-family: Arial, sans-serif;
-    
+    overflow-x: hidden; /* Убираем горизонтальный скролл */
 }
 
-/* Прелоадер */
-.preloader {
+/* Блок с видео */
+.video-block {
     position: relative;
-    width: 100%;
-    height: 500px;
-    background-color: rgb(68, 66, 66);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    width: 1920px;
+    height: 1079px;
 }
 
-/* Логотип и кнопка */
-.preloader__header {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 0 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;
-}
-
-.preloader__title {
-    color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-left: 30px;
-}
-
-.preloader__button {
-    background-color: white;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    margin-right: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.preloader__button:hover {
-    background-color: #ddd;
-}
-
-/* Первое видео: фон на всю ширину */
-.preloader__video--bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover; /* Видео растянется по ширине экрана с сохранением пропорций */
-    z-index: 1;
-}
-
-/* Монитор с рамкой для второго видео */
-.preloader__monitor {
-    position: absolute;
-    width: 450px;
-    height: 450px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-
-.preloader__monitor-frame {
-    width: 100%;
-    height: 100%;
-    padding: 30px;
-    
-    border-radius: 10px;
-    
-}
-
-.preloader__video--overlay {
-    position: absolute;
-    z-index: 5;
-    bottom: -25%;
-    height: 250px;
-   
-}
-
-/* Основной контент */
-.content {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 0 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+.video-block video {
+    width: 100%; /* Заполняем блок видео */
+    height: 100%; /* Заполняем блок видео */
+    object-fit: cover; /* Обрезаем видео по пропорциям */
 }
 
 /* Заголовок */
 .header {
-    text-align: center;
-    margin-top: 100px;
+    position: absolute; /* Позиционируем относительно окна */
+    width: 1920px;
+    height: 87px;
+    top: 25px;
+    padding: 40px 100px 0 100px;
+    display: flex;
+    justify-content: space-between;
+     /* Полупрозрачный фон */
+    z-index: 10; /* Размещаем выше других блоков */
+    border-style: none;
 }
 
+/* Стиль заголовка и кнопки */
 .header__title {
-    font-size: 3rem;
     color: white;
+    font-size: 2rem;
 }
 
-/* Подзаголовок */
-.subtext {
-    text-align: center;
-    margin: 20px auto;
+.header__button {
+    
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+    outline: none; /* Для синий ободки */
+    border: 0;
+    background: transparent;
+    color: #FFFFFF;
+    ;
+    
 }
 
-.subtext__line {
-    font-size: 1.2rem;
-    color: lightgray;
-}
-
-/* Тексты внизу страницы */
-.bottom-text {
+/* Блок с текстом */
+.text-block {
     position: absolute;
-    bottom: 50px;
-    width: 100%;
+    width: 1740px;
+    height: 578px;
+    top: 266px;
+    left: 90px;
     display: flex;
-    justify-content: space-around;
+}
+
+.text-item {
+    position: absolute;
+    right: 250px;
+    font-size: 16rem; /* Размер текста */
     color: white;
 }
+.powerful { 
+    font-size: 40px;
+}
 
-.bottom-text__item {
-    text-align: center;
+#text1 {
+    position: absolute;
+    width: 568px; 
+    height: 177px;
+    left: 100px;
+}
+
+#text2 {
+    position: absolute;
+    width: 495px;
+    height: 177px;
+    left: 666px;
+}
+
+#text3 {
+    position: absolute;
+    width: 673px; 
+    height: 184px; 
+}
+
+/* Блок с монитором и видео */
+.preloader__monitor {
+    position: fixed; /* Фиксируем блок */
+    top: 300px; /* Задаем верхнюю позицию */
+    left: 700px; /* Задаем левую позицию */
+    width: 698px;
+    height: 761px;
+    z-index: 1; /* Устанавливаем z-index ниже других блоков */
+    
+}
+
+.monitor-image {
+    width: 100%; /* Изображение заполняет весь блок */
+    height: auto; /* Соотношение сторон сохраняется */
+}
+
+.preloader__video--overlay {
+    position: absolute;
+    top: 187.17px; /* Позиция видео */
+    left: 6.82px; /* Позиция видео */
+    width: 682.32px; /* Ширина видео */
+    height: 385.57px; /* Высота видео */
+    z-index: 2; /* Видео выше изображения монитора */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(94, 91, 91, 0));
+}
+
+/* Блок с текстом */
+.main-text-block {
+    background: radial-gradient(circle, rgba(48, 47, 47, 0.8), rgba(34, 33, 33, 0));
+    position: absolute; /* Позиционирование блока */
+    width: 1920px; /* Ширина блока */
+    height: 1350px; /* Высота блока */
+    top: 944px; /* Позиция блока по вертикали */
+    color: rgb(255, 170, 170); /* Цвет текста */
+    display: flex; /* Flexbox для центрирования текста */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    text-align: center; /* Центрирование текста */
+    font-family: 'Roboto', sans-serif; /* Убедитесь, что шрифт подключен */
+    font-weight: 476;
+    line-height: 96px;
+    z-index: 5;
+
+
+
+
+
+
+}
+.main__text { 
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(94, 91, 91, 0));
+   
+    position: absolute;
+    
+    font-size: 96px;
+}
+
+/* Второй блок с текстом */
+.footer-text-block {
+    position: absolute;
+    width: 1740px; /* Фиксированная ширина */
+    height: 186px; /* Высота блока */
+    top: 2399px;
+    left: 90px;
+    color: white; /* Цвет текста */
+    z-index: 250;
+    
 }
 
 
-
-img { 
-    width: 450px;
-    height: 450px;
-    position: relative;
-    bottom: -50%;
-    z-index: 1;
+.footer-text-block {
+    position: absolute;
+    width: 1740px; /* Фиксированная ширина */
+    height: 186px; /* Высота блока */
+    top: 2399px;
+    left: 90px;
+    color: rgb(49, 46, 46); /* Цвет текста */
 }
 
-.main-block { 
-    background-color: darkgrey;
-    height: 700px;
-    top: 944px;
+/* Новый блок внизу */
+.bottom-block {
+    position: absolute;
+    width: 1920px; /* Фиксированная ширина */
+    height: 985px; /* Фиксированная высота */
+    top: 2093px; /* Указанная позиция */
+    padding: 120px 90px; /* Отступы */
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 90px;
+    opacity: 1; /* Начальная непрозрачность */
+    
 }
+
+/* Заголовок в нижнем блоке */
+.headline {
+    width: 349px;
+    height: 40px;
+    opacity: 1; /* Начальная непрозрачность */
+    color: rgb(48, 42, 42); /* Цвет текста заголовка */
+}
+
+/* Контентный блок */
+.content-block {
+    width: 1740px; /* Фиксированная ширина */
+    height: auto; /* Авто-высота для содержимого */
+    gap: 20px; /* Пробел между элементами */
+    z-index: 300;
+}
+
+/* Элементы контента */
+.content-item {
+    width: 1740px; /* Фиксированная ширина */
+    height: 56px; /* Фиксированная высота */
+    padding: 0 20px; /* Отступы */
+    opacity: 1; /* Начальная непрозрачность */
+    color: rgb(41, 33, 33); /* Цвет текста */
+}
+
+.side_text { 
+    width: 1920px;
+    height: 1350px;
+    top: 1700px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
 
 
 
