@@ -8,7 +8,7 @@ html, body {
     max-width: 1920px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Убираем горизонтальный скролл */
+    
 }
 
 /* Блок с видео */
@@ -64,7 +64,7 @@ html, body {
     position: absolute;
     width: 1740px;
     height: 578px;
-    top: 266px;
+    top: 100px;
     left: 90px;
     display: flex;
 }
@@ -101,18 +101,23 @@ html, body {
 
 /* Блок с монитором и видео */
 .preloader__monitor {
-    position: fixed; /* Фиксируем блок */
-    top: 300px; /* Задаем верхнюю позицию */
-    left: 700px; /* Задаем левую позицию */
+    position: fixed;
+    top: 250px; /* Положение монитора на экране, когда он фиксирован */
+    left: 50%; /* Центрируем монитор относительно экрана */
+    transform: translateX(-50%); /* Центрирование */
     width: 698px;
-    height: 761px;
-    z-index: 1; /* Устанавливаем z-index ниже других блоков */
+    height: auto;
     
 }
 
 .monitor-image {
-    width: 100%; /* Изображение заполняет весь блок */
-    height: auto; /* Соотношение сторон сохраняется */
+    position: absolute; /* Абсолютное позиционирование изображения */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
 
 .preloader__video--overlay {
@@ -122,17 +127,18 @@ html, body {
     width: 682.32px; /* Ширина видео */
     height: 385.57px; /* Высота видео */
     z-index: 2; /* Видео выше изображения монитора */
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(94, 91, 91, 0));
+    object-fit: cover;
+    
 }
 
 /* Блок с текстом */
 .main-text-block {
-    background: radial-gradient(circle, rgba(48, 47, 47, 0.8), rgba(34, 33, 33, 0));
+    background: radial-gradient(circle, rgb(94 91 91 / 10%), rgb(112 107 107 / 80%));
     position: absolute; /* Позиционирование блока */
     width: 1920px; /* Ширина блока */
     height: 1350px; /* Высота блока */
     top: 944px; /* Позиция блока по вертикали */
-    color: rgb(255, 170, 170); /* Цвет текста */
+    color: rgb(238, 235, 235); /* Цвет текста */
     display: flex; /* Flexbox для центрирования текста */
     justify-content: center; /* Центрирование по горизонтали */
     align-items: center; /* Центрирование по вертикали */
@@ -220,10 +226,136 @@ html, body {
 .side_text { 
     width: 1920px;
     height: 1350px;
-    top: 1700px;
+    top: 1900px;
     position: absolute;
     display: flex;
     justify-content: space-between;
+}
+
+.text_one { 
+    font-family: Roboto Flex;
+font-size: 48px;
+font-weight: 476;
+line-height: 62.4px;
+text-align: left;
+padding-left: 50px;
+color: #bdbdbd;
+
+
+}
+
+.text_two { 
+    font-family: Roboto Flex;
+    font-size: 48px;
+    font-weight: 476;
+    line-height: 62.4px;
+    text-align: left;
+    padding-right: 50px;
+    color: #bdbdbd;
+
+}
+
+.awards {
+    z-index: 10;
+    position: absolute;
+    top: 2400px; /* убрал absolute, чтобы он занимал полное пространство */
+    width: 90%; 
+    left: 110px;/* ширина 100% экрана */
+     /* увеличенный padding для красивого отступа */
+     /* можно добавить фон для выделения блока */
+    
+}
+
+.awards h2 {
+    font-size: 36px; /* увеличиваем размер заголовка */
+    margin-bottom: 30px;
+    text-align: left; /* центрируем заголовок */
+    color: #333;
+}
+
+.award-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    position: relative;
+    border-bottom: 1px solid #d0d0d0; /* добавляем нижнюю границу */
+}
+
+.award-name,
+.award-type,
+.award-date {
+    font-size: 18px; /* увеличиваем размер текста */
+}
+
+.award-name {
+    font-weight: bold;
+    width: 30%; /* Название занимает 30% ширины */
+    color: #333;
+}
+
+.award-type {
+    width: 50%; /* Тип награды занимает 50% ширины */
+    text-align: left;
+    color: #666;
+}
+
+.award-date {
+    width: 20%; /* Дата занимает 20% ширины */
+    text-align: right;
+    color: #333;
+}
+
+/* Линии между элементами */
+.award-item::before, .award-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #d0d0d0; /* Цвет линии */
+}
+
+.award-item::before {
+    top: 0; /* Линия сверху */
+}
+
+.award-item::after {
+    bottom: 0; /* Линия снизу */
+}
+
+/* Убираем нижнюю линию у последнего элемента */
+.award-item:last-child::after {
+    display: none;
+}
+
+
+.sub { 
+    display: flex;
+    position: absolute;
+    left: 1500px;
+    top: 300px;
+    color: #FFFFFF;
+    font-family: Roboto Flex;
+font-size: 28px;
+font-weight: 476;
+line-height: 28px;
+text-align: left;
+
+
+}
+
+.title_sub2 { 
+    list-style: none;
+    width: 350px;
+    position: absolute;
+    left: 120px;
+}
+
+.title_sub { 
+    width: 250px;
+    position: absolute;
+    right: 50px;
 }
 
 
@@ -234,3 +366,120 @@ html, body {
 
 
 /* Адаптивные стили для мобильных устройств */
+
+/* Общие стили для адаптивного дизайна */
+/* Общие стили для адаптивного дизайна */
+@media (max-width: 1200px) {
+    .video-block {
+        height: 60vh; /* Высота видео-блока на меньших экранах */
+    }
+
+    .header {
+        padding: 20px; /* Уменьшаем отступы */
+        flex-direction: column; /* Вертикальное выравнивание */
+        align-items: center; /* Центрируем элементы */
+    }
+
+    .header__title {
+        font-size: 1.5rem; /* Уменьшаем размер заголовка */
+    }
+
+    .header__button {
+        font-size: 16px; /* Уменьшаем размер кнопки */
+    }
+
+    .text-block {
+        flex-direction: column; /* Вертикальное выравнивание для текста */
+        align-items: center; /* Центрируем элементы */
+        width: 100%; /* Ширина 100% для меньших экранов */
+        padding: 20px; /* Отступы */
+    }
+
+    .text-item {
+        font-size: 8rem; /* Уменьшаем размер текста */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .sub {
+        flex-direction: column; /* Вертикальное выравнивание */
+        position: relative; /* Изменяем позиционирование */
+        left: 0; /* Убираем смещение */
+        top: 20px; /* Немного смещаем вниз */
+        width: 100%; /* Ширина 100% */
+    }
+
+    .preloader__monitor {
+        width: 80%; /* Ширина монитора на меньших экранах */
+        height: auto; /* Высота авто */
+    }
+
+    .main-text-block {
+        height: auto; /* Высота авто */
+        padding: 20px; /* Добавляем отступы */
+    }
+
+    .main__text {
+        font-size: 48px; /* Уменьшаем размер основного текста */
+        line-height: 60px; /* Уменьшаем межстрочное расстояние */
+    }
+
+    .side_text {
+        flex-direction: column; /* Вертикальное выравнивание для бокового текста */
+        width: 100%; /* Ширина 100% */
+        align-items: center; /* Центрируем элементы */
+    }
+
+    .text_one, .text_two {
+        font-size: 24px; /* Уменьшаем размер текста */
+        line-height: 32px; /* Уменьшаем межстрочное расстояние */
+        padding: 10px; /* Добавляем отступы */
+    }
+
+    .awards {
+        width: 100%; /* Ширина 100% */
+        padding: 20px; /* Добавляем отступы */
+    }
+
+    .award-item {
+        flex-direction: column; /* Вертикальное выравнивание для элементов награды */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    .award-name, .award-type, .award-date {
+        width: 100%; /* Ширина 100% для элементов награды */
+        text-align: left; /* Левое выравнивание текста */
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px; /* Уменьшаем отступы */
+    }
+
+    .text-item {
+        font-size: 5rem; /* Уменьшаем размер текста */
+    }
+
+    .main__text {
+        font-size: 36px; /* Уменьшаем размер основного текста */
+    }
+
+    .main-text-block {
+        padding: 10px; /* Уменьшаем отступы */
+    }
+
+    .video-block {
+        height: 40vh; /* Высота видео-блока */
+    }
+
+    .side_text {
+        flex-direction: column; /* Вертикальное выравнивание для бокового текста */
+    }
+
+    .text_one, .text_two {
+        font-size: 18px; /* Уменьшаем размер текста */
+        line-height: 24px; /* Уменьшаем межстрочное расстояние */
+    }
+}
+
+

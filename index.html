@@ -24,12 +24,23 @@
     <div class="text-block">
         <div class="text-item" id="text1">NASTARTWEB
            <div class="powerful">powerful test <br>Digital Agency</div>
-        </div>
+          
        
             <!-- <p>powerful test Digital Agency</p> -->
         
         
     </div>
+    <div class="sub">
+    <div class="title_sub">что и как
+        делаем</div>
+        <ul class="title_sub2">
+            <li>текст рыба</li>
+            <li>рыба тест текст рыба</li>
+            <li>текст рыба тест</li>
+            <li>и крутые кейсы</li>
+        </ul>
+    </div>
+</div>
 
     <!-- Блок с монитором и видео -->
     <div class="preloader__monitor">
@@ -42,52 +53,55 @@
         <p class="main__text">The world moves<br> fast, we keep pace.<br> Cut through the<br> noise with our<br> process.</p>
     </div>
     <div class="side_text"> 
-        <div class="text_one">Комплексные возможности ∞ проектирования</div>
-        <div class="text_two">Мощный дуэт, движимый дизайном</div>
+        <div class="text_one">Комплексные<br> возможности<br> проектирования</div>
+        <div class="text_two">Мощный<br> дуэт, движимый<br> дизайном</div>
     </div>
 
     <!-- Второй блок с текстом -->
     <div class="footer-text-block">
-        <p>Текст для второго блока</p>
+        
     </div>
 
 
     <div class="footer-text-block"></div>
-        <p>Текст для второго блока</p>
+        
     </div>
 
     <!-- Новый блок внизу -->
-    <div class="bottom-block">
-        <div class="headline">Заголовок</div>
-        <div class="content-block">
-            <div class="content-item" data-name="nastart.dev" data-date="08.11.2023" data-award="Madeontilda">nastart.dev</div>
-            <div class="content-item" data-name="nastart.dev" data-date="08.11.2023" data-award="Madeontilda">nastart.dev</div>
-            <div class="content-item" data-name="nastart.dev" data-date="08.11.2023" data-award="Madeontilda">nastart.dev</div>
-            <div class="content-item" data-name="nastart.dev" data-date="08.11.2023" data-award="Madeontilda">nastart.dev</div>
-            <div class="content-item" data-name="nastart.dev" data-date="08.11.2023" data-award="Madeontilda">nastart.dev</div>
-            <div class="content-item" data-name="nastart.dev" data-date="08.11.2023" data-award="Madeontilda">nastart.dev</div>
+    <div class="awards">
+        <h2>НАШИ НАГРАДЫ</h2>
+        <div class="award-item">
+            <div class="award-name">NASTART.DEV</div>
+            <div class="award-type">MADEONTILDA</div>
+            <div class="award-date">08.11.2023</div>
+        </div>
+        <div class="award-item">
+            <div class="award-name">NASTART.DEV</div>
+            <div class="award-type">AWWWARDS // HONOR MENTION</div>
+            <div class="award-date">08.11.2023</div>
+        </div>
+        <div class="award-item">
+            <div class="award-name">NASTART.DEV</div>
+            <div class="award-type">DPROFILE // ЛУЧШЕЕ</div>
+            <div class="award-date">08.11.2023</div>
+        </div>
+        <div class="award-item">
+            <div class="award-name">NASTART.DEV</div>
+            <div class="award-type">DPROFILE // БРЕНДИНГ</div>
+            <div class="award-date">08.11.2023</div>
+        </div>
+        <div class="award-item">
+            <div class="award-name">NASTART.DEV</div>
+            <div class="award-type">DPROFILE // ИНТЕРФЕЙСЫ</div>
+            <div class="award-date">08.11.2023</div>
+        </div>
+        <div class="award-item">
+            <div class="award-name">NASTART.DEV</div>
+            <div class="award-type">CSSDA // UI DESIGN AWARD</div>
+            <div class="award-date">08.11.2023</div>
+        </div>
     </div>
-    <script>       
-    const monitor = document.getElementById('monitor');
-    const bottomBlock = document.getElementById('bottomBlock');
-
-    // Используем IntersectionObserver для отслеживания пересечения
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                monitor.style.opacity = '0'; // Скрываем монитор
-            } else {
-                monitor.style.opacity = '1'; // Показываем монитор, когда блок не пересекается
-            }
-        });
-    }, {
-        root: null, // Отслеживаем относительно viewport
-        threshold: 0 // Реагируем, когда блок частично входит в область видимости
-    });
-
-    // Наблюдаем за нижним блоком
-    observer.observe(bottomBlock);
-</script> 
+    <script src="script.js"></script>
 </body>
 </html>
 
