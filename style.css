@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
 
 html, body {
@@ -38,16 +39,8 @@ html, body {
     border-style: none;
 }
 
-/* Стиль заголовка и кнопки */
-.header__title {
-    color: white;
-    position: absolute;
-    left: 35px;
-}
-
 .header__button {
-    position: absolute;
-    left: 1400px;
+    
     font-family: Roboto;
     font-size: 18px;
     font-weight: 300;
@@ -61,6 +54,16 @@ html, body {
     
 }
 
+/* Стиль заголовка и кнопки */
+.header__title {
+    color: white;
+    
+    
+    padding: 40 0 0 100px;
+}
+
+
+
 /* Блок с текстом */
 .text-block {
     position: absolute;
@@ -69,12 +72,14 @@ html, body {
     top: 100px;
     left: 90px;
     display: flex;
+    right: 250px;
 }
 
 .text-item {
-    position: absolute;
-    right: 0px;
-    font-size: 10rem; /* Размер текста */
+    
+   
+    padding-right: 90px;
+    font-size: 12rem; /* Размер текста */
     color: white;
 }
 .powerful { 
@@ -82,10 +87,14 @@ html, body {
 }
 
 #text1 {
+    
+
+
     position: absolute;
     width: 568px; 
     height: 177px;
-    left: 100px;
+    top: 100px;
+    
 }
 
 #text2 {
@@ -103,8 +112,8 @@ html, body {
 
 /* Блок с монитором и видео */
 .preloader__monitor {
-    position: fixed; /* Либо fixed, в зависимости от ваших нужд */
-    top: 50px; /* Отступ от верхней части окна */
+    position: absolute; /* Либо fixed, в зависимости от ваших нужд */
+    top: 320px; /* Отступ от верхней части окна */
     left: 50%;
     transform: translateX(-50%);
     width: 698px; /* Ширина вашего контейнера */
@@ -134,7 +143,10 @@ html, body {
 
 /* Блок с текстом */
 .main-text-block {
-    background: radial-gradient(circle, rgb(94 91 91 / 10%), rgb(112 107 107 / 80%));
+    font-family: Roboto Flex;
+
+
+    background: radial-gradient(circle, rgb(94 91 91 / 20%), rgba(112, 107, 107, 0.8));
     position: absolute; /* Позиционирование блока */
     width: 100%; /* Ширина блока */
     height: 1350px; /* Высота блока */
@@ -144,7 +156,7 @@ html, body {
     justify-content: center; /* Центрирование по горизонтали */
     align-items: center; /* Центрирование по вертикали */
     text-align: center; /* Центрирование текста */
-    font-family: 'Roboto', sans-serif; /* Убедитесь, что шрифт подключен */
+    
     font-weight: 476;
     line-height: 96px;
     z-index: 5;
@@ -159,7 +171,7 @@ html, body {
     
    left: 350px;
     position: absolute;
-    
+    font-family: Roboto Flex;
     font-size: 96px;
 }
 
@@ -329,7 +341,7 @@ color: #0e0c0c;
 .sub { 
     display: flex;
     position: absolute;
-    left: 1100px;
+    left: 1250px;
     top: 300px;
     color: #FFFFFF;
     font-family: Roboto Flex;
@@ -342,16 +354,25 @@ text-align: left;
 }
 
 .title_sub2 { 
+    width: 250px;
     list-style: none;
-    width: 350px;
+    left: -95px;
     position: absolute;
-    left: 50px;
+    margin: 0;
+    padding: 0;
+    
+    font-size: 28px;
+
 }
 
 .title_sub { 
     width: 250px;
     position: absolute;
     right: 20px;
+    font-family: Roboto Flex;
+
+
+
 }
 
 
