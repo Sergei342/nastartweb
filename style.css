@@ -13,8 +13,8 @@ html, body {
 
 /* Блок с видео */
 .video-block {
-    position: relative;
-    width: 1920px;
+    position: absolute;
+    width: 100%;
     height: 1079px;
 }
 
@@ -27,7 +27,7 @@ html, body {
 /* Заголовок */
 .header {
     position: absolute; /* Позиционируем относительно окна */
-    width: 1920px;
+    width: 100%;
     height: 87px;
     top: 25px;
     padding: 40px 100px 0 100px;
@@ -41,11 +41,13 @@ html, body {
 /* Стиль заголовка и кнопки */
 .header__title {
     color: white;
-    font-size: 2rem;
+    position: absolute;
+    left: 35px;
 }
 
 .header__button {
-    
+    position: absolute;
+    left: 1400px;
     font-family: Roboto;
     font-size: 18px;
     font-weight: 300;
@@ -62,7 +64,7 @@ html, body {
 /* Блок с текстом */
 .text-block {
     position: absolute;
-    width: 1740px;
+    width: 140px;
     height: 578px;
     top: 100px;
     left: 90px;
@@ -71,8 +73,8 @@ html, body {
 
 .text-item {
     position: absolute;
-    right: 250px;
-    font-size: 16rem; /* Размер текста */
+    right: 0px;
+    font-size: 10rem; /* Размер текста */
     color: white;
 }
 .powerful { 
@@ -101,23 +103,22 @@ html, body {
 
 /* Блок с монитором и видео */
 .preloader__monitor {
-    position: fixed;
-    top: 250px; /* Положение монитора на экране, когда он фиксирован */
-    left: 50%; /* Центрируем монитор относительно экрана */
-    transform: translateX(-50%); /* Центрирование */
-    width: 698px;
-    height: auto;
+    position: fixed; /* Либо fixed, в зависимости от ваших нужд */
+    top: 50px; /* Отступ от верхней части окна */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 698px; /* Ширина вашего контейнера */
+    height: auto; /* Авто-высота для адаптивности */
+    max-height: 500px; /* Задайте максимальную высоту для контейнера, если это необходимо */
+    z-index: 2;
     
 }
 
 .monitor-image {
-    position: absolute; /* Абсолютное позиционирование изображения */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
+    width: 100%; /* Чтобы изображение занимало всю ширину */
+    height: auto; /* Высота автоматическая для сохранения пропорций */
+    object-fit: contain; 
+    
 }
 
 .preloader__video--overlay {
@@ -126,7 +127,7 @@ html, body {
     left: 6.82px; /* Позиция видео */
     width: 682.32px; /* Ширина видео */
     height: 385.57px; /* Высота видео */
-    z-index: 2; /* Видео выше изображения монитора */
+    z-index: 1; /* Видео выше изображения монитора */
     object-fit: cover;
     
 }
@@ -135,7 +136,7 @@ html, body {
 .main-text-block {
     background: radial-gradient(circle, rgb(94 91 91 / 10%), rgb(112 107 107 / 80%));
     position: absolute; /* Позиционирование блока */
-    width: 1920px; /* Ширина блока */
+    width: 100%; /* Ширина блока */
     height: 1350px; /* Высота блока */
     top: 944px; /* Позиция блока по вертикали */
     color: rgb(238, 235, 235); /* Цвет текста */
@@ -156,7 +157,7 @@ html, body {
 }
 .main__text { 
     
-   
+   left: 350px;
     position: absolute;
     
     font-size: 96px;
@@ -165,7 +166,7 @@ html, body {
 /* Второй блок с текстом */
 .footer-text-block {
     position: absolute;
-    width: 1740px; /* Фиксированная ширина */
+    width: 100%; /* Фиксированная ширина */
     height: 186px; /* Высота блока */
     top: 2399px;
     left: 90px;
@@ -175,22 +176,15 @@ html, body {
 }
 
 
-.footer-text-block {
-    position: absolute;
-    width: 1740px; /* Фиксированная ширина */
-    height: 186px; /* Высота блока */
-    top: 2399px;
-    left: 90px;
-    color: rgb(49, 46, 46); /* Цвет текста */
-}
+
 
 /* Новый блок внизу */
 .bottom-block {
     position: absolute;
-    width: 1920px; /* Фиксированная ширина */
+    width: 100%; /* Фиксированная ширина */
     height: 985px; /* Фиксированная высота */
     top: 2093px; /* Указанная позиция */
-    padding: 120px 90px; /* Отступы */
+     /* Отступы */
     display: flex;
     flex-direction: column;
     gap: 90px;
@@ -208,7 +202,7 @@ html, body {
 
 /* Контентный блок */
 .content-block {
-    width: 1740px; /* Фиксированная ширина */
+    width: 100%; /* Фиксированная ширина */
     height: auto; /* Авто-высота для содержимого */
     gap: 20px; /* Пробел между элементами */
     z-index: 300;
@@ -216,7 +210,7 @@ html, body {
 
 /* Элементы контента */
 .content-item {
-    width: 1740px; /* Фиксированная ширина */
+    width: 100%; /* Фиксированная ширина */
     height: 56px; /* Фиксированная высота */
     padding: 0 20px; /* Отступы */
     opacity: 1; /* Начальная непрозрачность */
@@ -224,7 +218,7 @@ html, body {
 }
 
 .side_text { 
-    width: 1920px;
+    width: 100%;
     height: 1350px;
     top: 1900px;
     position: absolute;
@@ -239,7 +233,7 @@ font-weight: 476;
 line-height: 62.4px;
 text-align: left;
 padding-left: 50px;
-color: #bdbdbd;
+color: #0e0c0c;
 
 
 }
@@ -250,8 +244,10 @@ color: #bdbdbd;
     font-weight: 476;
     line-height: 62.4px;
     text-align: left;
-    padding-right: 50px;
-    color: #bdbdbd;
+    
+    
+    
+    color: #161515;
 
 }
 
@@ -333,7 +329,7 @@ color: #bdbdbd;
 .sub { 
     display: flex;
     position: absolute;
-    left: 1500px;
+    left: 1100px;
     top: 300px;
     color: #FFFFFF;
     font-family: Roboto Flex;
@@ -349,137 +345,117 @@ text-align: left;
     list-style: none;
     width: 350px;
     position: absolute;
-    left: 120px;
+    left: 50px;
 }
 
 .title_sub { 
     width: 250px;
     position: absolute;
-    right: 50px;
+    right: 20px;
 }
 
 
 
-
-
-
-
-
-/* Адаптивные стили для мобильных устройств */
-
-/* Общие стили для адаптивного дизайна */
-/* Общие стили для адаптивного дизайна */
-@media (max-width: 1200px) {
+@media (max-width: 360px) {
     .video-block {
-        height: 60vh; /* Высота видео-блока на меньших экранах */
+        width: 100%; 
+        height: auto; 
+    }
+
+    .video-block video {
+        width: 100%; 
+        height: auto; 
     }
 
     .header {
-        padding: 20px; /* Уменьшаем отступы */
-        flex-direction: column; /* Вертикальное выравнивание */
-        align-items: center; /* Центрируем элементы */
+        padding: 20px; 
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .header__title {
-        font-size: 1.5rem; /* Уменьшаем размер заголовка */
+        font-size: 1.5rem; 
+        text-align: center; 
     }
 
     .header__button {
-        font-size: 16px; /* Уменьшаем размер кнопки */
+        font-size: 14px; 
+        margin-top: 10px; 
     }
 
     .text-block {
-        flex-direction: column; /* Вертикальное выравнивание для текста */
-        align-items: center; /* Центрируем элементы */
-        width: 100%; /* Ширина 100% для меньших экранов */
-        padding: 20px; /* Отступы */
+        flex-direction: column; 
+        align-items: center; 
+        width: 90%; 
+        top: 50px; 
+        left: 5%; 
     }
 
     .text-item {
-        font-size: 8rem; /* Уменьшаем размер текста */
-        text-align: center; /* Центрируем текст */
+        font-size: 8rem; 
+        color: white;
+        text-align: center; 
+        position: static; 
     }
 
-    .sub {
-        flex-direction: column; /* Вертикальное выравнивание */
-        position: relative; /* Изменяем позиционирование */
-        left: 0; /* Убираем смещение */
-        top: 20px; /* Немного смещаем вниз */
-        width: 100%; /* Ширина 100% */
-    }
-
-    .preloader__monitor {
-        width: 80%; /* Ширина монитора на меньших экранах */
-        height: auto; /* Высота авто */
+    .powerful {
+        font-size: 20px; 
     }
 
     .main-text-block {
-        height: auto; /* Высота авто */
-        padding: 20px; /* Добавляем отступы */
-    }
-
-    .main__text {
-        font-size: 48px; /* Уменьшаем размер основного текста */
-        line-height: 60px; /* Уменьшаем межстрочное расстояние */
+        width: 90%; 
+        height: auto; 
+        padding: 20px; 
+        font-size: 24px; 
     }
 
     .side_text {
-        flex-direction: column; /* Вертикальное выравнивание для бокового текста */
-        width: 100%; /* Ширина 100% */
-        align-items: center; /* Центрируем элементы */
+        flex-direction: column; 
+        align-items: center; 
+        top: 1600px; 
+        width: 90%; 
+        left: 5%; 
     }
 
-    .text_one, .text_two {
-        font-size: 24px; /* Уменьшаем размер текста */
-        line-height: 32px; /* Уменьшаем межстрочное расстояние */
-        padding: 10px; /* Добавляем отступы */
+    .text_one,
+    .text_two {
+        font-size: 24px; 
+        line-height: 28px; 
+        text-align: center; 
+        padding: 10px 0; 
     }
 
     .awards {
-        width: 100%; /* Ширина 100% */
-        padding: 20px; /* Добавляем отступы */
+        width: 100%; 
+        left: 0; 
+        top: 2200px; 
+    }
+
+    .awards h2 {
+        font-size: 24px; 
+        text-align: center; 
+        margin-bottom: 20px; 
     }
 
     .award-item {
-        flex-direction: column; /* Вертикальное выравнивание для элементов награды */
-        align-items: flex-start; /* Выравнивание по левому краю */
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px 0; 
+        border-bottom: 1px solid #d0d0d0; 
     }
 
-    .award-name, .award-type, .award-date {
-        width: 100%; /* Ширина 100% для элементов награды */
-        text-align: left; /* Левое выравнивание текста */
+    .award-name,
+    .award-type,
+    .award-date {
+        font-size: 16px; 
+        text-align: center; 
     }
 }
 
-@media (max-width: 768px) {
-    .header {
-        padding: 10px; /* Уменьшаем отступы */
-    }
 
-    .text-item {
-        font-size: 5rem; /* Уменьшаем размер текста */
-    }
 
-    .main__text {
-        font-size: 36px; /* Уменьшаем размер основного текста */
-    }
 
-    .main-text-block {
-        padding: 10px; /* Уменьшаем отступы */
-    }
 
-    .video-block {
-        height: 40vh; /* Высота видео-блока */
-    }
 
-    .side_text {
-        flex-direction: column; /* Вертикальное выравнивание для бокового текста */
-    }
-
-    .text_one, .text_two {
-        font-size: 18px; /* Уменьшаем размер текста */
-        line-height: 24px; /* Уменьшаем межстрочное расстояние */
-    }
-}
 
 
