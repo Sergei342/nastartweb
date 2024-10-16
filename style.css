@@ -15,12 +15,12 @@ html, body {
 /* Блок с видео */
 .video-block {
     position: absolute;
-    width: 100%;
+    width: 1920px;
     height: 1079px;
 }
 
 .video-block video {
-    width: 100%; /* Заполняем блок видео */
+    width: 1920px; /* Заполняем блок видео */
     height: 100%; /* Заполняем блок видео */
     object-fit: cover; /* Обрезаем видео по пропорциям */
 }
@@ -28,7 +28,7 @@ html, body {
 /* Заголовок */
 .header {
     position: absolute; /* Позиционируем относительно окна */
-    width: 100%;
+    width: 1920px;
     height: 87px;
     top: 25px;
     padding: 40px 100px 0 100px;
@@ -69,21 +69,23 @@ html, body {
     position: absolute;
     width: 140px;
     height: 578px;
-    top: 100px;
-    left: 90px;
+    top: 200px;
+    left: 230px;
     display: flex;
     right: 250px;
 }
 
 .text-item {
     
+    
    
     padding-right: 90px;
-    font-size: 12rem; /* Размер текста */
+    font-size: 16rem; /* Размер текста */
     color: white;
 }
 .powerful { 
-    font-size: 40px;
+    text-align: left;
+    font-size: 46px;
 }
 
 #text1 {
@@ -93,7 +95,9 @@ html, body {
     position: absolute;
     width: 568px; 
     height: 177px;
-    top: 100px;
+    top: 50px;
+    text-align: center;
+    left: 80px;
     
 }
 
@@ -113,7 +117,7 @@ html, body {
 /* Блок с монитором и видео */
 .preloader__monitor {
     position: absolute; /* Либо fixed, в зависимости от ваших нужд */
-    top: 320px; /* Отступ от верхней части окна */
+    top: 450px; /* Отступ от верхней части окна */
     left: 50%;
     transform: translateX(-50%);
     width: 698px; /* Ширина вашего контейнера */
@@ -148,7 +152,7 @@ html, body {
 
     background: radial-gradient(circle, rgb(94 91 91 / 20%), rgba(112, 107, 107, 0.8));
     position: absolute; /* Позиционирование блока */
-    width: 100%; /* Ширина блока */
+    width: 1920px; /* Ширина блока */
     height: 1350px; /* Высота блока */
     top: 944px; /* Позиция блока по вертикали */
     color: rgb(238, 235, 235); /* Цвет текста */
@@ -169,23 +173,13 @@ html, body {
 }
 .main__text { 
     
-   left: 350px;
+   left: 630px;
     position: absolute;
     font-family: Roboto Flex;
     font-size: 96px;
 }
 
-/* Второй блок с текстом */
-.footer-text-block {
-    position: absolute;
-    width: 100%; /* Фиксированная ширина */
-    height: 186px; /* Высота блока */
-    top: 2399px;
-    left: 90px;
-    color: white; /* Цвет текста */
-    z-index: 250;
-    
-}
+
 
 
 
@@ -193,7 +187,7 @@ html, body {
 /* Новый блок внизу */
 .bottom-block {
     position: absolute;
-    width: 100%; /* Фиксированная ширина */
+    width: 1920px; /* Фиксированная ширина */
     height: 985px; /* Фиксированная высота */
     top: 2093px; /* Указанная позиция */
      /* Отступы */
@@ -214,7 +208,7 @@ html, body {
 
 /* Контентный блок */
 .content-block {
-    width: 100%; /* Фиксированная ширина */
+    width: 1920px; /* Фиксированная ширина */
     height: auto; /* Авто-высота для содержимого */
     gap: 20px; /* Пробел между элементами */
     z-index: 300;
@@ -222,7 +216,7 @@ html, body {
 
 /* Элементы контента */
 .content-item {
-    width: 100%; /* Фиксированная ширина */
+    width: 1920px; /* Фиксированная ширина */
     height: 56px; /* Фиксированная высота */
     padding: 0 20px; /* Отступы */
     opacity: 1; /* Начальная непрозрачность */
@@ -230,7 +224,8 @@ html, body {
 }
 
 .side_text { 
-    width: 100%;
+    
+    width: 1920px;
     height: 1350px;
     top: 1900px;
     position: absolute;
@@ -256,6 +251,7 @@ color: #0e0c0c;
     font-weight: 476;
     line-height: 62.4px;
     text-align: left;
+    padding-right: 35px;
     
     
     
@@ -267,8 +263,8 @@ color: #0e0c0c;
     z-index: 10;
     position: absolute;
     top: 2400px; /* убрал absolute, чтобы он занимал полное пространство */
-    width: 90%; 
-    left: 110px;/* ширина 100% экрана */
+    width: 1920px; 
+   
      /* увеличенный padding для красивого отступа */
      /* можно добавить фон для выделения блока */
     
@@ -340,9 +336,10 @@ color: #0e0c0c;
 
 .sub { 
     display: flex;
+    
     position: absolute;
-    left: 1250px;
-    top: 300px;
+    left: 1550px;
+    top: 350px;
     color: #FFFFFF;
     font-family: Roboto Flex;
 font-size: 28px;
