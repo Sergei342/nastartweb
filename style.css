@@ -9,6 +9,7 @@ html, body {
     max-width: 1920px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
+    height: 100%;
     
 }
 
@@ -70,7 +71,7 @@ html, body {
     width: 140px;
     height: 578px;
     top: 200px;
-    left: 230px;
+    left: -5px;
     display: flex;
     right: 250px;
 }
@@ -79,7 +80,7 @@ html, body {
     
     
    
-    padding-right: 90px;
+    padding-right: 70px;
     font-size: 16rem; /* Размер текста */
     color: white;
 }
@@ -116,32 +117,38 @@ html, body {
 
 /* Блок с монитором и видео */
 .preloader__monitor {
-    position: fixed; /* Либо fixed, в зависимости от ваших нужд */
-    top: 450px; /* Отступ от верхней части окна */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 698px; /* Ширина вашего контейнера */
-    height: auto; /* Авто-высота для адаптивности */
-    max-height: 500px; /* Задайте максимальную высоту для контейнера, если это необходимо */
-    z-index: 2;
+    
+        position: absolute; /* Зафиксировано на экране */
+        left: 50%; /* Позиция по горизонтали */
+        transform: translateX(-50%); /* Центрирование по горизонтали */
+        width: 698px; /* Ширина вашего контейнера */
+        height: auto; /* Авто-высота для адаптивности */
+        z-index: 2; /* Убедитесь, что блок поверх других элементов */
+        top: 450px; /* Начальная позиция top */
+        transition: opacity 0.3s; /* Плавный переход для изменения прозрачности */
+    
+    
+
+;
     
 }
 
 .monitor-image {
-    width: 100%; /* Чтобы изображение занимало всю ширину */
-    height: auto; /* Высота автоматическая для сохранения пропорций */
-    object-fit: contain; 
+    
+    width: 100%; /* Монитор занимает всю ширину */
+    height: auto; /* Пропорциональная высота */
+    object-fit: contain;
     
 }
 
 .preloader__video--overlay {
     position: absolute;
-    top: 187.17px; /* Позиция видео */
-    left: 6.82px; /* Позиция видео */
-    width: 682.32px; /* Ширина видео */
-    height: 385.57px; /* Высота видео */
-    z-index: 1; /* Видео выше изображения монитора */
+    top: 187.17px; /* Позиция внутри монитора */
+    left: 6.82px;
+    width: 682.32px;
+    height: 385.57px;
     object-fit: cover;
+    z-index: 1; 
     
 }
 
@@ -260,10 +267,11 @@ color: #0e0c0c;
 }
 
 .awards {
+    left: 50px;
     z-index: 10;
     position: absolute;
     top: 2400px; /* убрал absolute, чтобы он занимал полное пространство */
-    width: 1920px; 
+    width: 1800px; 
    
      /* увеличенный padding для красивого отступа */
      /* можно добавить фон для выделения блока */
