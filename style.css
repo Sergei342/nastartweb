@@ -115,16 +115,16 @@ html, body {
     height: 184px; 
 }
 
-/* Блок с монитором и видео */
+
 .preloader__monitor {
     
-    position: absolute; /* Зафиксировано на экране */
-    left: 50%; /* Позиция по горизонтали */
-    transform: translateX(-50%); /* Центрирование по горизонтали */
-    width: 698px; /* Ширина вашего контейнера */
-    height: auto; /* Авто-высота для адаптивности */
-    z-index: 2; /* Убедитесь, что блок поверх других элементов */
-    top: 450px; /* Начальная позиция top */
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 698px; 
+    height: auto;
+    z-index: 2;
+    top: 450px; 
     transition: opacity 0.3s;
     
     
@@ -135,15 +135,15 @@ html, body {
 
 .monitor-image {
     
-    width: 100%; /* Монитор занимает всю ширину */
-    height: auto; /* Пропорциональная высота */
+    width: 100%; 
+    height: auto; 
     object-fit: contain;
     
 }
 
 .preloader__video--overlay {
     position: absolute;
-    top: 187.17px; /* Позиция внутри монитора */
+    top: 187.17px; 
     left: 6.82px;
     width: 682.32px;
     height: 385.57px;
@@ -158,15 +158,15 @@ html, body {
 
 
     background: radial-gradient(circle, rgb(94 91 91 / 20%), rgba(112, 107, 107, 0.8));
-    position: absolute; /* Позиционирование блока */
-    width: 1920px; /* Ширина блока */
-    height: 1350px; /* Высота блока */
-    top: 944px; /* Позиция блока по вертикали */
-    color: rgb(238, 235, 235); /* Цвет текста */
-    display: flex; /* Flexbox для центрирования текста */
-    justify-content: center; /* Центрирование по горизонтали */
-    align-items: center; /* Центрирование по вертикали */
-    text-align: center; /* Центрирование текста */
+    position: absolute;
+    width: 1920px;
+    height: 1350px; 
+    top: 944px; 
+    color: rgb(238, 235, 235); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
     
     font-weight: 476;
     line-height: 96px;
@@ -191,43 +191,43 @@ html, body {
 
 
 
-/* Новый блок внизу */
+
 .bottom-block {
     position: absolute;
-    width: 1920px; /* Фиксированная ширина */
-    height: 985px; /* Фиксированная высота */
-    top: 2093px; /* Указанная позиция */
-     /* Отступы */
+    width: 1920px; 
+    height: 985px; 
+    top: 2093px; 
+     
     display: flex;
     flex-direction: column;
     gap: 90px;
-    opacity: 1; /* Начальная непрозрачность */
+    opacity: 1; 
     
 }
 
-/* Заголовок в нижнем блоке */
+
 .headline {
     width: 349px;
     height: 40px;
-    opacity: 1; /* Начальная непрозрачность */
-    color: rgb(48, 42, 42); /* Цвет текста заголовка */
+    opacity: 1; 
+    color: rgb(48, 42, 42); 
 }
 
-/* Контентный блок */
+
 .content-block {
-    width: 1920px; /* Фиксированная ширина */
-    height: auto; /* Авто-высота для содержимого */
-    gap: 20px; /* Пробел между элементами */
+    width: 1920px; 
+    height: auto; 
+    gap: 20px; 
     z-index: 300;
 }
 
-/* Элементы контента */
+
 .content-item {
-    width: 1920px; /* Фиксированная ширина */
-    height: 56px; /* Фиксированная высота */
-    padding: 0 20px; /* Отступы */
-    opacity: 1; /* Начальная непрозрачность */
-    color: rgb(41, 33, 33); /* Цвет текста */
+    width: 1920px; 
+    height: 56px; 
+    padding: 0 20px; 
+    opacity: 1; 
+    color: rgb(41, 33, 33); 
 }
 
 .side_text { 
@@ -303,21 +303,21 @@ color: #0e0c0c;
     position: relative;
 }
 
-/* Добавляем стиль для картинки */
+
 .project-image {
     display: none;
     position: absolute;
     top: 0;
-    left: 120%; /* Двигаем изображение правее */
+    left: 120%; 
     width: 256px;
     height: 302px;
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    transform: rotate(-10deg); /* Наклоняем картинку на 10 градусов */
+    transform: rotate(-10deg);
     z-index: 10;
 }
 
-/* Показываем изображение и надпись "проект" при наведении на NASTART.DEV */
+
 .award-name:hover .project-image,
 .award-name:hover ~ .project-label {
     display: block;
@@ -327,7 +327,6 @@ span:hover:hover ~ .project-label {
     display: block;
 }
 
-/* Дата и стрелка */
 .award-date {
     width: 20%;
     text-align: right;
@@ -335,23 +334,23 @@ span:hover:hover ~ .project-label {
     position: relative;
 }
 
-/* Стрелка вверх-вбок */
+
 .arrow-up-right {
     font-size: 20px;
     color: #333;
     margin-left: 10px;
-    transform: rotate(-45deg); /* Поворот стрелки на 45 градусов */
+    transform: rotate(-45deg);
 }
 
-/* Надпись "проект" скрыта по умолчанию */
+
 .project-label {
     font-size: 16px;
     color: #666;
     margin-left: 10px;
-    display: none; /* Скрываем по умолчанию */
+    display: none;
 }
 
-/* Линии между элементами */
+
 .award-item::before, .award-item::after {
     content: "";
     position: absolute;
