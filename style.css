@@ -116,7 +116,7 @@ html, body {
 
 /* Блок с монитором и видео */
 .preloader__monitor {
-    position: absolute; /* Либо fixed, в зависимости от ваших нужд */
+    position: fixed; /* Либо fixed, в зависимости от ваших нужд */
     top: 450px; /* Отступ от верхней части окна */
     left: 50%;
     transform: translateX(-50%);
