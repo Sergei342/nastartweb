@@ -118,14 +118,14 @@ html, body {
 /* Блок с монитором и видео */
 .preloader__monitor {
     
-        position: absolute; /* Зафиксировано на экране */
-        left: 50%; /* Позиция по горизонтали */
-        transform: translateX(-50%); /* Центрирование по горизонтали */
-        width: 698px; /* Ширина вашего контейнера */
-        height: auto; /* Авто-высота для адаптивности */
-        z-index: 2; /* Убедитесь, что блок поверх других элементов */
-        top: 450px; /* Начальная позиция top */
-        transition: opacity 0.3s; /* Плавный переход для изменения прозрачности */
+    position: absolute; /* Зафиксировано на экране */
+    left: 50%; /* Позиция по горизонтали */
+    transform: translateX(-50%); /* Центрирование по горизонтали */
+    width: 698px; /* Ширина вашего контейнера */
+    height: auto; /* Авто-высота для адаптивности */
+    z-index: 2; /* Убедитесь, что блок поверх других элементов */
+    top: 450px; /* Начальная позиция top */
+    transition: opacity 0.3s;
     
     
 
@@ -270,18 +270,14 @@ color: #0e0c0c;
     left: 50px;
     z-index: 10;
     position: absolute;
-    top: 2400px; /* убрал absolute, чтобы он занимал полное пространство */
-    width: 1800px; 
-   
-     /* увеличенный padding для красивого отступа */
-     /* можно добавить фон для выделения блока */
-    
+    top: 2400px;
+    width: 1800px;
 }
 
 .awards h2 {
-    font-size: 36px; /* увеличиваем размер заголовка */
+    font-size: 36px;
     margin-bottom: 30px;
-    text-align: left; /* центрируем заголовок */
+    text-align: left;
     color: #333;
 }
 
@@ -291,31 +287,68 @@ color: #0e0c0c;
     align-items: center;
     padding: 15px 0;
     position: relative;
-    border-bottom: 1px solid #d0d0d0; /* добавляем нижнюю границу */
+    border-bottom: 1px solid #d0d0d0;
 }
 
 .award-name,
 .award-type,
 .award-date {
-    font-size: 18px; /* увеличиваем размер текста */
+    font-size: 18px;
 }
 
 .award-name {
     font-weight: bold;
-    width: 30%; /* Название занимает 30% ширины */
+    width: 30%;
     color: #333;
+    position: relative;
 }
 
-.award-type {
-    width: 50%; /* Тип награды занимает 50% ширины */
-    text-align: left;
-    color: #666;
+/* Добавляем стиль для картинки */
+.project-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 120%; /* Двигаем изображение правее */
+    width: 256px;
+    height: 302px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform: rotate(-10deg); /* Наклоняем картинку на 10 градусов */
+    z-index: 10;
 }
 
+/* Показываем изображение и надпись "проект" при наведении на NASTART.DEV */
+.award-name:hover .project-image,
+.award-name:hover ~ .project-label {
+    display: block;
+}
+span:hover:hover:hover .project-image,
+span:hover:hover ~ .project-label {
+    display: block;
+}
+
+/* Дата и стрелка */
 .award-date {
-    width: 20%; /* Дата занимает 20% ширины */
+    width: 20%;
     text-align: right;
     color: #333;
+    position: relative;
+}
+
+/* Стрелка вверх-вбок */
+.arrow-up-right {
+    font-size: 20px;
+    color: #333;
+    margin-left: 10px;
+    transform: rotate(-45deg); /* Поворот стрелки на 45 градусов */
+}
+
+/* Надпись "проект" скрыта по умолчанию */
+.project-label {
+    font-size: 16px;
+    color: #666;
+    margin-left: 10px;
+    display: none; /* Скрываем по умолчанию */
 }
 
 /* Линии между элементами */
@@ -325,21 +358,23 @@ color: #0e0c0c;
     left: 0;
     right: 0;
     height: 1px;
-    background-color: #d0d0d0; /* Цвет линии */
+    background-color: #d0d0d0;
 }
 
 .award-item::before {
-    top: 0; /* Линия сверху */
+    top: 0;
 }
 
 .award-item::after {
-    bottom: 0; /* Линия снизу */
+    bottom: 0;
 }
 
-/* Убираем нижнюю линию у последнего элемента */
 .award-item:last-child::after {
     display: none;
 }
+
+
+
 
 
 .sub { 
@@ -379,6 +414,8 @@ text-align: left;
 
 
 }
+
+
 
 
 
