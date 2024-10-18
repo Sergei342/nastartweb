@@ -1,0 +1,523 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+html, body {
+    max-width: 1920px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    
+}
+
+/* Блок с видео */
+.video-block {
+    position: absolute;
+    width: 1920px;
+    height: 1079px;
+}
+
+.video-block video {
+    width: 1920px; /* Заполняем блок видео */
+    height: 100%; /* Заполняем блок видео */
+    object-fit: cover; /* Обрезаем видео по пропорциям */
+}
+
+/* Заголовок */
+.header {
+    position: absolute; /* Позиционируем относительно окна */
+    width: 1920px;
+    height: 87px;
+    top: 25px;
+    padding: 40px 100px 0 100px;
+    display: flex;
+    justify-content: space-between;
+     /* Полупрозрачный фон */
+    z-index: 10; /* Размещаем выше других блоков */
+    border-style: none;
+}
+
+.header__button {
+    
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+    outline: none; /* Для синий ободки */
+    border: 0;
+    background: transparent;
+    color: #FFFFFF;
+    ;
+    
+}
+
+/* Стиль заголовка и кнопки */
+.header__title {
+    color: white;
+    
+    
+    padding: 40 0 0 100px;
+}
+
+
+
+/* Блок с текстом */
+.text-block {
+    position: absolute;
+    width: 140px;
+    height: 578px;
+    top: 200px;
+    left: -5px;
+    display: flex;
+    right: 250px;
+}
+
+.text-item {
+    
+    
+   
+    padding-right: 70px;
+    font-size: 16rem; /* Размер текста */
+    color: white;
+}
+.powerful { 
+    text-align: left;
+    font-size: 46px;
+}
+
+#text1 {
+    
+
+
+    position: absolute;
+    width: 568px; 
+    height: 177px;
+    top: 50px;
+    text-align: center;
+    left: 80px;
+    
+}
+
+#text2 {
+    position: absolute;
+    width: 495px;
+    height: 177px;
+    left: 666px;
+}
+
+#text3 {
+    position: absolute;
+    width: 673px; 
+    height: 184px; 
+}
+
+
+.preloader__monitor {
+    
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 698px; 
+    height: auto;
+    z-index: 2;
+    top: 450px; 
+    transition: opacity 0.3s;
+    
+    
+
+;
+    
+}
+
+.monitor-image {
+    
+    width: 100%; 
+    height: auto; 
+    object-fit: contain;
+    
+}
+
+.preloader__video--overlay {
+    position: absolute;
+    top: 187.17px; 
+    left: 6.82px;
+    width: 682.32px;
+    height: 385.57px;
+    object-fit: cover;
+    z-index: 1; 
+    
+}
+
+/* Блок с текстом */
+.main-text-block {
+    font-family: Roboto Flex;
+
+
+    background: radial-gradient(circle, rgb(94 91 91 / 20%), rgba(112, 107, 107, 0.8));
+    position: absolute;
+    width: 1920px;
+    height: 1350px; 
+    top: 944px; 
+    color: rgb(238, 235, 235); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    
+    font-weight: 476;
+    line-height: 96px;
+    z-index: 5;
+
+
+
+
+
+
+}
+.main__text { 
+    
+   left: 630px;
+    position: absolute;
+    font-family: Roboto Flex;
+    font-size: 96px;
+}
+
+
+
+
+
+
+
+.bottom-block {
+    position: absolute;
+    width: 1920px; 
+    height: 985px; 
+    top: 2093px; 
+     
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    opacity: 1; 
+    
+}
+
+
+.headline {
+    width: 349px;
+    height: 40px;
+    opacity: 1; 
+    color: rgb(48, 42, 42); 
+}
+
+
+.content-block {
+    width: 1920px; 
+    height: auto; 
+    gap: 20px; 
+    z-index: 300;
+}
+
+
+.content-item {
+    width: 1920px; 
+    height: 56px; 
+    padding: 0 20px; 
+    opacity: 1; 
+    color: rgb(41, 33, 33); 
+}
+
+.side_text { 
+    
+    width: 1920px;
+    height: 1350px;
+    top: 1900px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text_one { 
+    font-family: Roboto Flex;
+font-size: 48px;
+font-weight: 476;
+line-height: 62.4px;
+text-align: left;
+padding-left: 50px;
+color: #0e0c0c;
+
+
+}
+
+.text_two { 
+    font-family: Roboto Flex;
+    font-size: 48px;
+    font-weight: 476;
+    line-height: 62.4px;
+    text-align: left;
+    padding-right: 35px;
+    
+    
+    
+    color: #161515;
+
+}
+
+.awards {
+    left: 50px;
+    z-index: 10;
+    position: absolute;
+    top: 2400px;
+    width: 1800px;
+}
+
+.awards h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: left;
+    color: #333;
+}
+
+.award-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    position: relative;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.award-name,
+.award-type,
+.award-date {
+    font-size: 18px;
+}
+
+.award-name {
+    font-weight: bold;
+    width: 30%;
+    color: #333;
+    position: relative;
+}
+
+
+.project-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 120%; 
+    width: 256px;
+    height: 302px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform: rotate(-10deg);
+    z-index: 10;
+}
+
+
+.award-name:hover .project-image,
+.award-name:hover ~ .project-label {
+    display: block;
+}
+span:hover:hover:hover .project-image,
+span:hover:hover ~ .project-label {
+    display: block;
+}
+
+.award-date {
+    width: 20%;
+    text-align: right;
+    color: #333;
+    position: relative;
+}
+
+
+.arrow-up-right {
+    font-size: 20px;
+    color: #333;
+    margin-left: 10px;
+    transform: rotate(-45deg);
+}
+
+
+.project-label {
+    font-size: 16px;
+    color: #666;
+    margin-left: 10px;
+    display: none;
+}
+
+
+.award-item::before, .award-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #d0d0d0;
+}
+
+.award-item::before {
+    top: 0;
+}
+
+.award-item::after {
+    bottom: 0;
+}
+
+.award-item:last-child::after {
+    display: none;
+}
+
+
+
+
+
+.sub { 
+    display: flex;
+    
+    position: absolute;
+    left: 1550px;
+    top: 350px;
+    color: #FFFFFF;
+    font-family: Roboto Flex;
+font-size: 28px;
+font-weight: 476;
+line-height: 28px;
+text-align: left;
+
+
+}
+
+.title_sub2 { 
+    width: 250px;
+    list-style: none;
+    left: -95px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    
+    font-size: 28px;
+
+}
+
+.title_sub { 
+    width: 250px;
+    position: absolute;
+    right: 20px;
+    font-family: Roboto Flex;
+
+
+
+}
+
+
+
+
+
+@media (max-width: 360px) {
+    .video-block {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .video-block video {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .header {
+        padding: 20px; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .header__title {
+        font-size: 1.5rem; 
+        text-align: center; 
+    }
+
+    .header__button {
+        font-size: 14px; 
+        margin-top: 10px; 
+    }
+
+    .text-block {
+        flex-direction: column; 
+        align-items: center; 
+        width: 90%; 
+        top: 50px; 
+        left: 5%; 
+    }
+
+    .text-item {
+        font-size: 8rem; 
+        color: white;
+        text-align: center; 
+        position: static; 
+    }
+
+    .powerful {
+        font-size: 20px; 
+    }
+
+    .main-text-block {
+        width: 90%; 
+        height: auto; 
+        padding: 20px; 
+        font-size: 24px; 
+    }
+
+    .side_text {
+        flex-direction: column; 
+        align-items: center; 
+        top: 1600px; 
+        width: 90%; 
+        left: 5%; 
+    }
+
+    .text_one,
+    .text_two {
+        font-size: 24px; 
+        line-height: 28px; 
+        text-align: center; 
+        padding: 10px 0; 
+    }
+
+    .awards {
+        width: 100%; 
+        left: 0; 
+        top: 2200px; 
+    }
+
+    .awards h2 {
+        font-size: 24px; 
+        text-align: center; 
+        margin-bottom: 20px; 
+    }
+
+    .award-item {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px 0; 
+        border-bottom: 1px solid #d0d0d0; 
+    }
+
+    .award-name,
+    .award-type,
+    .award-date {
+        font-size: 16px; 
+        text-align: center; 
+    }
+}
+
+
+
+
+
+
+
+
